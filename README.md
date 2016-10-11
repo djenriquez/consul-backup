@@ -1,3 +1,4 @@
+# consul-backup
 Dockerized Consul Backup and Restore tool.
 
 This will use consul-api (Go library) to recursively backup and restore all your
@@ -21,14 +22,14 @@ Options:
   -r, --restore                      Activate restore mode
 ```
 
-Creating backups:
+## Creating backups:
 ```sh
 docker run --rm \
 djenriquez/consul-backup \
 i <CONSUL_ADDRESS>:<CONSUL_PORT> > <BACKUP_FILE_NAME>
 ```
 
-Restoring backups:
+## Restoring backups:
 ```sh
 docker run --rm \
 -v `pwd`:/restore \
