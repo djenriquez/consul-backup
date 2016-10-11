@@ -24,15 +24,23 @@ Options:
 
 ## Creating backups:
 ```sh
+CONSUL_ADDRESS=10.0.1.10
+CONSUL_PORT=8500
+BACKUP_FILE_NAME=backup
+
 docker run --rm \
 djenriquez/consul-backup \
--i <CONSUL_ADDRESS>:<CONSUL_PORT> > <BACKUP_FILE_NAME>
+-i $CONSUL_ADDRESS:$CONSUL_PORT > $BACKUP_FILE_NAME
 ```
 
 ## Restoring backups:
 ```sh
+CONSUL_ADDRESS=10.0.1.10
+CONSUL_PORT=8500
+RESTORE_FILE_NAME=backup
+
 docker run --rm \
 -v `pwd`:/restore \
 djenriquez/consul-backup \
--i <CONSUL_ADDRESS>:<CONSUL_PORT> <RESTORE_FILE_NAME>
+-i $CONSUL_ADDRESS:$CONSUL_PORT $RESTORE_FILE_NAME
 ```
