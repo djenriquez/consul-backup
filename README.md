@@ -26,7 +26,7 @@ Options:
 ```sh
 docker run --rm \
 djenriquez/consul-backup \
-i <CONSUL_ADDRESS>:<CONSUL_PORT> > <BACKUP_FILE_NAME>
+-i <CONSUL_ADDRESS>:<CONSUL_PORT> > <BACKUP_FILE_NAME>
 ```
 
 ## Restoring backups:
